@@ -13,17 +13,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('web.fronts.landing-page');
-})->name('landing-page');
-
-Route::get('/admin', function(){
     return view('web.dashboards.dashboard');
-});
+})->name('dashboard');
 
-Route::get('/login', function(){
-    return view('web.auth.login');
-})->name('login');
-
-Route::get('/register', function(){
-    return view('web.auth.register');
-})->name('register');
+Route::get('/search', function(){
+    return view('web.dashboards.search');
+})->name('search');
